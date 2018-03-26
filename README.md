@@ -1,5 +1,5 @@
 # UAb - Universidade Aberta
-# Unidade Curricular Laboratório de Programação (21179).
+# Unidade Curricular Laboratório de Desenvolvimento de Software (21179).
 
 Projecto de cálculo de consumos de energia (electricidade e/ou gás natural).
 
