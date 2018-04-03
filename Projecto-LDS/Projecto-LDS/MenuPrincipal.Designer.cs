@@ -1,6 +1,6 @@
 ﻿namespace Projecto_LDS
 {
-    partial class Form1
+    partial class MenuPrincipal
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.Electricidade = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.GN = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // Electricidade
             // 
+            this.Electricidade.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Electricidade.Location = new System.Drawing.Point(73, 60);
             this.Electricidade.Name = "Electricidade";
             this.Electricidade.Size = new System.Drawing.Size(100, 23);
@@ -43,14 +44,14 @@
             this.Electricidade.Text = "Energia Eléctrica";
             this.Electricidade.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // GN
             // 
-            this.button2.Location = new System.Drawing.Point(73, 109);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Gás Natural";
-            this.button2.UseVisualStyleBackColor = true;
+            this.GN.Location = new System.Drawing.Point(73, 109);
+            this.GN.Name = "GN";
+            this.GN.Size = new System.Drawing.Size(75, 23);
+            this.GN.TabIndex = 2;
+            this.GN.Text = "Gás Natural";
+            this.GN.UseVisualStyleBackColor = true;
             // 
             // richTextBox1
             // 
@@ -70,7 +71,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.GN);
             this.Controls.Add(this.Electricidade);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -80,7 +81,7 @@
 
         #endregion
         private System.Windows.Forms.Button Electricidade;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button GN;
         private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
