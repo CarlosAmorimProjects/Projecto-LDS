@@ -29,6 +29,10 @@ namespace Projecto_LDS
 
         private void Electricidade_Click(object sender, EventArgs e)
         {
+            MenuElect menuElect = new MenuElect();
+            this.Hide();
+            menuElect.ShowDialog();
+            this.Close();
 
         }
 
