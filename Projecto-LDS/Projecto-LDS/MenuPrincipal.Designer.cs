@@ -43,6 +43,7 @@
             this.Electricidade.TabIndex = 1;
             this.Electricidade.Text = "Energia Eléctrica";
             this.Electricidade.UseVisualStyleBackColor = true;
+            this.Electricidade.Click += new System.EventHandler(this.Electricidade_Click);
             // 
             // GN
             // 
@@ -52,6 +53,7 @@
             this.GN.TabIndex = 2;
             this.GN.Text = "Gás Natural";
             this.GN.UseVisualStyleBackColor = true;
+            this.GN.Click += new System.EventHandler(this.GN_Click);
             // 
             // richTextBox1
             // 
@@ -64,7 +66,7 @@
             this.richTextBox1.Text = "Cálculo de consumos de energia";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
-            // Form1
+            // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -73,7 +75,7 @@
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.GN);
             this.Controls.Add(this.Electricidade);
-            this.Name = "Form1";
+            this.Name = "MenuPrincipal";
             this.Text = "Form1";
             this.ResumeLayout(false);
 

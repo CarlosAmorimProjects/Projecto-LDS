@@ -26,5 +26,15 @@ namespace Projecto_LDS
         {
 
         }
+
+        private void Electricidade_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GN_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
