@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projecto_LDS.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,6 +40,21 @@ namespace Projecto_LDS
         private void GN_Click(object sender, EventArgs e)
         {
 
+            this.Hide();
+            new MenuGas().ShowDialog();
+            ShowDialog();
+            /*MenuGas menuGas= new MenuGas();
+            this.Hide();
+            menuGas.ShowDialog();
+            this.Close();*/
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Configuracoes configur = new Configuracoes();
+            this.Hide();
+            configur.ShowDialog();
+            this.Close();
         }
     }
 }

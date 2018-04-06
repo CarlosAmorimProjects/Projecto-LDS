@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.Electricidade = new System.Windows.Forms.Button();
             this.GN = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Electricidade
@@ -56,6 +57,18 @@
             this.GN.UseVisualStyleBackColor = true;
             this.GN.Click += new System.EventHandler(this.GN_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(673, 411);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 27);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Configurações";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -63,6 +76,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.GN);
             this.Controls.Add(this.Electricidade);
             this.Name = "MenuPrincipal";
@@ -74,6 +88,7 @@
         #endregion
         private System.Windows.Forms.Button Electricidade;
         private System.Windows.Forms.Button GN;
+        private System.Windows.Forms.Button button1;
     }
 }
 
