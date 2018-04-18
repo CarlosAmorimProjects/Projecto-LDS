@@ -41,9 +41,13 @@ namespace Projecto_LDS
         {
 
             this.Hide();
-            new MenuGas().ShowDialog();
+            MenuGas menuGas = new MenuGas();
+            menuGas.ShowDialog();
             ShowDialog();
-            /*MenuGas menuGas= new MenuGas();
+
+            /*new MenuGas().ShowDialog();
+            ShowDialog();
+            MenuGas menuGas= new MenuGas();
             this.Hide();
             menuGas.ShowDialog();
             this.Close();*/

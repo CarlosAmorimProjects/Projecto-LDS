@@ -30,7 +30,22 @@ namespace Projecto_LDS.Views
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
+            string tarifaSimples = textBox3.Text;
+        }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string tarifaBiVazio = textBox1.Text;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            string tarifaBiFora = textBox2.Text;
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            string tarifaGN = textBox4.Text;
         }
     }
 }

@@ -8,18 +8,21 @@ namespace Projecto_LDS.Model
 {
     class recebeConfigs
     {
-            public void configsTarifaSimples()
+            public void configsTarifaSimples(string tarifaSimples)
             {
-
-
+                double tarifaSimplesD = Convert.ToDouble(tarifaSimples);
             }
 
-            public void configsBihoraria ()
+            public void configsBihoraria (string tarifaBiVazio, string tarifaBiFora)
             {
-
-
+                double tarifaBiVazioD = Convert.ToDouble(tarifaBiVazio);
+                double tarifaBiForaD = Convert.ToDouble(tarifaBiFora);
             }
             
+            public void configsGN (string tarifaGN)
+            {
+                double tarifaGnD = Convert.ToDouble(tarifaGN);
+            }
        
 
     }
