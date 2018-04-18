@@ -9,15 +9,17 @@ namespace Projecto_LDS.Model
     class Calcular
     {
 
-        public double CalculoConsumos (int LeituraVazio, int LeituraForaVazio)
+        public double Calculo(int leituraVazio, int leituraFora, double tarifaVazio, double tarifaFora)
+
         {
             double resultado;
 
-            resultado = (LeituraVazio * 0.19) + (LeituraForaVazio * 0.9);
+            resultado = (leituraVazio * tarifaVazio) + (leituraFora * tarifaFora);
 
             return resultado;
 
         }
+        
 
     }
 }
