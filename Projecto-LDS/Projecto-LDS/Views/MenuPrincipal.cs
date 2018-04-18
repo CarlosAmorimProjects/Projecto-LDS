@@ -30,10 +30,10 @@ namespace Projecto_LDS
 
         private void Electricidade_Click(object sender, EventArgs e)
         {
-            MenuElect menuElect = new MenuElect();
             this.Hide();
+            MenuElect menuElect = new MenuElect();
             menuElect.ShowDialog();
-            this.Close();
+            ShowDialog();
 
         }
 
@@ -51,10 +51,10 @@ namespace Projecto_LDS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Configuracoes configur = new Configuracoes();
             this.Hide();
+            Configuracoes configur = new Configuracoes();
             configur.ShowDialog();
-            this.Close();
+            ShowDialog();
         }
     }
 }

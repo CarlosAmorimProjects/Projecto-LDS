@@ -27,5 +27,10 @@ namespace Projecto_LDS.Views
             this.Close();
 
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
