@@ -57,7 +57,7 @@ namespace Projecto_LDS
         {
             String tarifa = comboBox1.Text;
             
-            // delegate
+            // método delegate
             OnConsumosRecebidos();
 
 
