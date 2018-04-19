@@ -168,6 +168,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Configuracoes";
             this.Text = "Configuracoes";
+            this.Load += new System.EventHandler(this.Configuracoes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

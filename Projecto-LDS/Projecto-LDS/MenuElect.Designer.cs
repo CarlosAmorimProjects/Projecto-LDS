@@ -40,10 +40,10 @@
             this.LeituraForaVazio = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Gráfico = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Gráfico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -123,10 +123,6 @@
             this.Gráfico.TabIndex = 7;
             this.Gráfico.Text = "Gráfico de Consumos";
             // 
-            // programBindingSource
-            // 
-            this.programBindingSource.DataSource = typeof(Projecto_LDS.Program);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -158,6 +154,10 @@
             this.label3.Size = new System.Drawing.Size(516, 31);
             this.label3.TabIndex = 10;
             this.label3.Text = "Cálculo de consumos de energia eléctrica";
+            // 
+            // programBindingSource
+            // 
+            this.programBindingSource.DataSource = typeof(Projecto_LDS.Program);
             // 
             // MenuElect
             // 

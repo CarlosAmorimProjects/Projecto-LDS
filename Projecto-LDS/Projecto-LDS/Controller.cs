@@ -5,10 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Projecto_LDS.Model
+
 {
-    class recebeConfigs
+    class controller
     {
-            public void configsTarifaSimples(string tarifaSimples)
+            
+            public void ConfigsTarifaSimples(string tarifaSimples)
             {
                 double tarifaSimplesD = Convert.ToDouble(tarifaSimples);
             }

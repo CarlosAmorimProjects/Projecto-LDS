@@ -9,9 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Projecto_LDS.Views
+
 {
+    
+
     public partial class Configuracoes : Form
     {
+        public delegate void GuardarTS(string tarifaSimples);
+        public GuardarTS tarifaSimples;
+        public delegate void GuardarBi(string tarifaBiVazio, string tarifaBiFora);
+        public GuardarBi GB;
+        public delegate void GuardaGN(string tarifaGN);
+        public GuardaGN GN;
+
+
         public Configuracoes()
         {
             InitializeComponent();
@@ -24,13 +35,15 @@ namespace Projecto_LDS.Views
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+             this.Close();
 
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            string tarifaSimples = textBox3.Text;
+            string tarifaSimples2 = textBox3.Text;
+            //this.tarifaSimples += new GuardarTS(tarifaSimples);
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -46,6 +59,10 @@ namespace Projecto_LDS.Views
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
             string tarifaGN = textBox4.Text;
+        }
+
+        private void Configuracoes_Load(object sender, EventArgs e)
+        {
         }
     }
 }

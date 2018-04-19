@@ -46,45 +46,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\Class1.cs" />
-    <Compile Include="Model\Calcular.cs" />
-    <Compile Include="Controller\recebeConfigs.cs" />
-    <Compile Include="Views\Configuracoes.cs">
+    <Compile Include="Model.cs" />
+    <Compile Include="Controller.cs" />
+    <Compile Include="Configuracoes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Configuracoes.Designer.cs">
+    <Compile Include="Configuracoes.Designer.cs">
       <DependentUpon>Configuracoes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuElect.cs">
+    <Compile Include="MenuElect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MenuElect.Designer.cs">
+    <Compile Include="MenuElect.Designer.cs">
       <DependentUpon>MenuElect.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuGas.cs">
+    <Compile Include="MenuGas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MenuGas.Designer.cs">
+    <Compile Include="MenuGas.Designer.cs">
       <DependentUpon>MenuGas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuPrincipal.cs">
+    <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MenuPrincipal.Designer.cs">
+    <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Views\Configuracoes.resx">
+    <EmbeddedResource Include="Configuracoes.resx">
       <DependentUpon>Configuracoes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\MenuElect.resx">
+    <EmbeddedResource Include="MenuElect.resx">
       <DependentUpon>MenuElect.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\MenuGas.resx">
+    <EmbeddedResource Include="MenuGas.resx">
       <DependentUpon>MenuGas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\MenuPrincipal.resx">
+    <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

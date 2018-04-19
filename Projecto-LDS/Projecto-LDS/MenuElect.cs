@@ -9,10 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace Projecto_LDS
+
 {
+
     public partial class MenuElect : Form
+
     {
+                
         public MenuElect()
         {
             InitializeComponent();
@@ -38,13 +44,10 @@ namespace Projecto_LDS
         public void textBox5_TextChanged(object sender, EventArgs e)
         {
             int ContagemForaVazio = int.Parse(LeituraForaVazio.Text);
+
+          
         }
-
-        /*private void Calcular(int LeituraVazio, int LeituraForaVazio)
-        {
-            Calcular::CalculoConsumos(int LeituraVazio, int LeituraForaVazio);
-        }*/
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             
@@ -67,8 +70,15 @@ namespace Projecto_LDS
 
         private void label2_Click_1(object sender, EventArgs e)
         {
+            label2.Text = RecebeResultado (double resultado);
 
         }
+
+        public double RecebeResultado (double resultado)
+        {
+            return resultado;
+        }
+        
 
     }
 }
