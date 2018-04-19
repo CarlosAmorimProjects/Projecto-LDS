@@ -13,15 +13,7 @@ namespace Projecto_LDS
 {
    
     public partial class MenuPrincipal : Form
-    {
-       // public event CalculoConsumosEventHandler ConsumosRecebidos;
-
-       MenuElect menuElect = new MenuElect();
-       menuElect.
-        
-
-
-
+    {      
 
 
         public MenuPrincipal()

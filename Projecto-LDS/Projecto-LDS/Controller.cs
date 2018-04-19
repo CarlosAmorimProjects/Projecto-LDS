@@ -7,19 +7,11 @@ using System.Threading.Tasks;
 namespace Projecto_LDS.Model
 
 {
-    class controller
+    class Controller
     {
-        controller control = new controller();
+        Controller control = new Controller();
        
-
-        public void OnConsumosRecebidos(object source, EventArgs e)
-        {
-
-
-        }
-
-
-        public void ConfigsTarifaSimples(string tarifaSimples)
+            public void ConfigsTarifaSimples(string tarifaSimples)
             {
                 double tarifaSimplesD = Convert.ToDouble(tarifaSimples);
             }
