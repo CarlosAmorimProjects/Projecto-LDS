@@ -14,10 +14,14 @@ using System.Windows.Forms;
 namespace Projecto_LDS
 
 {
+    // criar o delegate
+    public delegate void CalculoConsumosEventHandler(object source, EventArgs args);
 
     public partial class MenuElect : Form
 
     {
+        
+        public event CalculoConsumosEventHandler ConsumosRecebidos;
                 
         public MenuElect()
         {
@@ -36,6 +40,7 @@ namespace Projecto_LDS
 
         public void textBox4_TextChanged(object sender, EventArgs e)
         {
+
             int ContagemVazio = int.Parse(LeituraVazio.Text);
             
 
@@ -50,7 +55,13 @@ namespace Projecto_LDS
         
         private void button1_Click(object sender, EventArgs e)
         {
+            String tarifa = comboBox1.Text;
             
+            OnConsumosRecebidos();
+
+
+            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -70,7 +81,7 @@ namespace Projecto_LDS
 
         private void label2_Click_1(object sender, EventArgs e)
         {
-            label2.Text = RecebeResultado (double resultado);
+            //label2.Text = RecebeResultado (double resultado);
 
         }
 
@@ -78,7 +89,16 @@ namespace Projecto_LDS
         {
             return resultado;
         }
-        
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        protected virtual void OnConsumosRecebidos()
+        {
+            ConsumosRecebidos?.Invoke(this, EventArgs.Empty);
+        }
     }
 }

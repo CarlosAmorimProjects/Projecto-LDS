@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace Projecto_LDS.Model
 {
-    public delegate void EnviarConsumos(double resultado);
-
+    
     class Model
     {
 
-        public delegate double EnviaConsumos(double resultado);
-
         public double CalculoConsumos(int leituraVazio, int leituraFora, double tarifaVazio, double tarifaFora)
+
         {
 
             double resultado;
@@ -23,10 +21,6 @@ namespace Projecto_LDS.Model
 
         }
 
-        public double ToResultado(double resultado)
-        {
-            return resultado;
-        }
-
+        
     }
 }

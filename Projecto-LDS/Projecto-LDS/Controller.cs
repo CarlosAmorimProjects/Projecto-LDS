@@ -9,8 +9,16 @@ namespace Projecto_LDS.Model
 {
     class controller
     {
-            
-            public void ConfigsTarifaSimples(string tarifaSimples)
+             
+
+        public void OnConsumosRecebidos(object source, EventArgs e)
+        {
+
+
+        }
+
+
+        public void ConfigsTarifaSimples(string tarifaSimples)
             {
                 double tarifaSimplesD = Convert.ToDouble(tarifaSimples);
             }
