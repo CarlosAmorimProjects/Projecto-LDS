@@ -96,6 +96,7 @@ namespace Projecto_LDS
             
         }
 
+        // método que recebe notificação do click
         protected virtual void OnConsumosRecebidos()
         {
             ConsumosRecebidos?.Invoke(this, EventArgs.Empty);
