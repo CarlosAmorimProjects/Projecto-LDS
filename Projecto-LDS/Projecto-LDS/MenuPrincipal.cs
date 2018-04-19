@@ -11,13 +11,25 @@ using System.Windows.Forms;
 
 namespace Projecto_LDS
 {
+   
     public partial class MenuPrincipal : Form
     {
+       // public event CalculoConsumosEventHandler ConsumosRecebidos;
+
+       MenuElect menuElect = new MenuElect();
+       menuElect.
+        
+
+
+
+
+
         public MenuPrincipal()
         {
             InitializeComponent();
         }
 
+            
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -60,5 +72,9 @@ namespace Projecto_LDS
             configur.ShowDialog();
             ShowDialog();
         }
+        
+        
+
     }
+
 }

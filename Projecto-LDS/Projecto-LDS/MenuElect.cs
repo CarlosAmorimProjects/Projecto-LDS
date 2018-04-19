@@ -14,15 +14,17 @@ using System.Windows.Forms;
 namespace Projecto_LDS
 
 {
+   
     // criar o delegate
-    public delegate void CalculoConsumosEventHandler(object source, EventArgs args);
+        public delegate void CalculoConsumosEventHandler(object source, EventArgs args);
 
     public partial class MenuElect : Form
 
     {
-        
-        public event CalculoConsumosEventHandler ConsumosRecebidos;
-                
+        public event CalculoConsumosEventHandler ConsumosRecebidos;      
+
+
+
         public MenuElect()
         {
             InitializeComponent();
@@ -98,9 +100,10 @@ namespace Projecto_LDS
         }
 
         // método que recebe notificação do click
-        protected virtual void OnConsumosRecebidos()
+        public virtual void OnConsumosRecebidos()
         {
             ConsumosRecebidos?.Invoke(this, EventArgs.Empty);
         }
+
     }
 }

@@ -9,7 +9,8 @@ namespace Projecto_LDS.Model
 {
     class controller
     {
-             
+        controller control = new controller();
+       
 
         public void OnConsumosRecebidos(object source, EventArgs e)
         {
