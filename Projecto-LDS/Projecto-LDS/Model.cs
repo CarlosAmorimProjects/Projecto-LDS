@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projecto_LDS.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace Projecto_LDS.Model
     {
         Model model = new Model();
 
-        public double CalculoConsumos(int leituraVazio, int leituraFora, double tarifaVazio, double tarifaFora)
+        public static double CalculoConsumos(int leituraVazio, int leituraFora, double tarifaVazio, double tarifaFora)
 
         {
 

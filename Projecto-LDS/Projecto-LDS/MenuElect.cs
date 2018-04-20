@@ -17,12 +17,17 @@ namespace Projecto_LDS
    
     // criar o delegate
         public delegate void CalculoConsumosEventHandler(object source, EventArgs args);
+        public delegate void RecebeVazioEventHandler(object source, int ContagemVazio);
+        public delegate void RecebeForaEventHandler(object source, int ContagemFora);
+        public delegate void TarifaEventHandler(object source, string tarifa);
 
     public partial class MenuElect : Form
 
     {
-        public event CalculoConsumosEventHandler ConsumosRecebidos;      
-
+        public event CalculoConsumosEventHandler ConsumosRecebidos;
+        public event RecebeVazioEventHandler recebeVazio;
+        public event RecebeForaEventHandler recebeFora;
+        public event TarifaEventHandler recebetarifa;
 
 
         public MenuElect()
@@ -44,20 +49,24 @@ namespace Projecto_LDS
         {
 
             int ContagemVazio = int.Parse(LeituraVazio.Text);
+            //delegate
+            OnrecebeVazio(this,ContagemVazio);
             
 
         }
 
+        
         public void textBox5_TextChanged(object sender, EventArgs e)
         {
-            int ContagemForaVazio = int.Parse(LeituraForaVazio.Text);
+            int ContagemFora = int.Parse(LeituraForaVazio.Text);
+            OnrecebeFora(this, ContagemFora);
 
           
         }
         
         private void button1_Click(object sender, EventArgs e)
         {
-            String tarifa = comboBox1.Text;
+            
             
             // método delegate
             OnConsumosRecebidos();
@@ -95,15 +104,33 @@ namespace Projecto_LDS
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            
+            String tarifa = comboBox1.Text;
+            OnTarifa(this, tarifa);
+
+
+
         }
 
-        // método que recebe notificação do click
+        
+        public virtual void OnTarifa(MenuElect menuElect, String tarifa)
+        {
+            recebetarifa?.Invoke(this, tarifa);
+        }
+
         public virtual void OnConsumosRecebidos()
         {
             ConsumosRecebidos?.Invoke(this, EventArgs.Empty);
         }
 
+
+        private void OnrecebeVazio(MenuElect menuElect, int contagemVazio)
+        {
+            recebeVazio?.Invoke(this, contagemVazio);
+        }
+
+        private void OnrecebeFora(MenuElect menuElect, int contagemFora)
+        {
+            recebeFora?.Invoke(this, contagemFora);
+        }
     }
 }

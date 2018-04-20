@@ -13,12 +13,37 @@ namespace Projecto_LDS
 {
    
     public partial class MenuPrincipal : Form
-    {      
-
-
+    {
+                
         public MenuPrincipal()
         {
             InitializeComponent();
+            MenuElect menuElect = new MenuElect();
+            menuElect.ConsumosRecebidos += new CalculoConsumosEventHandler(OnConsumosRecebidos);
+            menuElect.recebeVazio += new RecebeVazioEventHandler(OnrecebeVazio);
+            menuElect.recebeFora += new RecebeForaEventHandler(OnrecebeFora);
+            menuElect.recebetarifa += new TarifaEventHandler(Onrecebetarifa);
+
+            void Onrecebetarifa (object source, string tarifa)
+            {
+              
+            }
+
+            void OnrecebeFora (object source, int contagemFora)
+            {
+
+            }
+           
+            void OnrecebeVazio (object source, int contagemVazio)
+            {
+               
+            }
+
+            void OnConsumosRecebidos(object source, EventArgs e)
+            {
+                
+            }
+
         }
 
             
@@ -36,7 +61,6 @@ namespace Projecto_LDS
         {
             this.Hide();
             MenuElect menuElect = new MenuElect();
-            menuElect.ConsumosRecebidos += new CalculoConsumosEventHandler(OnConsumosRecebidos);
             menuElect.ShowDialog();
             ShowDialog();
 
@@ -49,13 +73,7 @@ namespace Projecto_LDS
             MenuGas menuGas = new MenuGas();
             menuGas.ShowDialog();
             ShowDialog();
-
-            /*new MenuGas().ShowDialog();
-            ShowDialog();
-            MenuGas menuGas= new MenuGas();
-            this.Hide();
-            menuGas.ShowDialog();
-            this.Close();*/
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -65,13 +83,7 @@ namespace Projecto_LDS
             configur.ShowDialog();
             ShowDialog();
         }
-
-        void OnConsumosRecebidos(object source, EventArgs e)
-        {
-            
-
-        }
-
+        
     }
 
 }

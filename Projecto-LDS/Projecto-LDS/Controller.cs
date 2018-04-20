@@ -9,11 +9,11 @@ namespace Projecto_LDS.Model
 {
     class Controller
     {
-        //Controller control = new Controller();
+
+            Controller control = new Controller();
        
             public void ConfigsTarifaSimples(string tarifaSimples)
             {
-                Controller controle = new Controller();
             double tarifaSimplesD = Convert.ToDouble(tarifaSimples);
             }
 
