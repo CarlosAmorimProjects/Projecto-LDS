@@ -36,6 +36,7 @@ namespace Projecto_LDS
         {
             this.Hide();
             MenuElect menuElect = new MenuElect();
+            menuElect.ConsumosRecebidos += new CalculoConsumosEventHandler(OnConsumosRecebidos);
             menuElect.ShowDialog();
             ShowDialog();
 
@@ -64,8 +65,12 @@ namespace Projecto_LDS
             configur.ShowDialog();
             ShowDialog();
         }
-        
-        
+
+        void OnConsumosRecebidos(object source, EventArgs e)
+        {
+            
+
+        }
 
     }
 

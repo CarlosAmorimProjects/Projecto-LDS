@@ -17,14 +17,14 @@ namespace Projecto_LDS
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MenuPrincipal());
 
-            MenuElect menuElect = new MenuElect();
+           /* MenuElect menuElect = new MenuElect();
 
             menuElect.ConsumosRecebidos += new CalculoConsumosEventHandler(OnConsumosRecebidos);
 
             void OnConsumosRecebidos (object source, EventArgs e)
             {
                 Console.WriteLine("Delegate a funcionar!!!");
-            }
+            }*/
             
         }
     }
