@@ -10,8 +10,7 @@ namespace Projecto_LDS.Model
     
     class Model
     {
-        Model model = new Model();
-
+      
         public static double CalculoConsumos(int leituraVazio, int leituraFora, double tarifaVazio, double tarifaFora)
 
         {

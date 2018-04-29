@@ -45,8 +45,8 @@ namespace Projecto_LDS.Views
 
              private void textBox3_TextChanged(object sender, EventArgs e)
              {
-                 string tarifaSimples2 = textBox3.Text;
-                 OnTarifaSimples(this, tarifaSimples2);
+                 string tarifaSimples = textBox3.Text;
+                 OnTarifaSimples(this, tarifaSimples);
 
              }
 
@@ -70,12 +70,12 @@ namespace Projecto_LDS.Views
 
             private void Configuracoes_Load(object sender, EventArgs e)
             {
-
+                this.Close();
             }
 
-            private void OnTarifaSimples(Configuracoes config, string tarifaSimples2)
+            private void OnTarifaSimples(Configuracoes config, string tarifaSimples)
             {
-                guardaTarifaSimples?.Invoke(this, tarifaSimples2);
+                guardaTarifaSimples?.Invoke(this, tarifaSimples);
             }
 
             private void OnTarifaBiVazio(Configuracoes config, string tarifaBiVazio)

@@ -17,8 +17,8 @@ namespace Projecto_LDS
    
         // criar o delegate
         public delegate void CalculoConsumosEventHandler(object source, EventArgs args);
-        public delegate void RecebeVazioEventHandler(object source, int ContagemVazio);
-        public delegate void RecebeForaEventHandler(object source, int ContagemFora);
+        public delegate void RecebeVazioEventHandler(object source, string ContagemVazio);
+        public delegate void RecebeForaEventHandler(object source, string ContagemFora);
         public delegate void TarifaEventHandler(object source, string tarifa);
 
     public partial class MenuElect : Form
@@ -48,7 +48,8 @@ namespace Projecto_LDS
         public void textBox4_TextChanged(object sender, EventArgs e)
         {
 
-            int ContagemVazio = int.Parse(LeituraVazio.Text);
+            string ContagemVazio = LeituraVazio.Text;
+
             //delegate
             OnrecebeVazio(this,ContagemVazio);
             
@@ -58,22 +59,34 @@ namespace Projecto_LDS
         
         public void textBox5_TextChanged(object sender, EventArgs e)
         {
+
+            string ContagemFora = LeituraForaVazio.Text;
+            //delegate
+            OnrecebeFora(this,ContagemFora);
+
+            /*int ContagemForaInt;
+            string ContagemFora = LeituraForaVazio.Text;
             int ContagemFora = int.Parse(LeituraForaVazio.Text);
-            OnrecebeFora(this, ContagemFora);
+            if (Int32.TryParse(ContagemFora, out ContagemForaInt))
+                {
+                OnrecebeFora(this, ContagemForaInt);
+                }
+            else
+            {
+                throw new MenuPrincipal.
+            }*/
+
+
+        }
+
 
           
-        }
+    
         
         private void button1_Click(object sender, EventArgs e)
-        {
-            
-            
+        {  
             // método delegate
             OnConsumosRecebidos();
-
-
-            
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -106,12 +119,8 @@ namespace Projecto_LDS
         {
             String tarifa = comboBox1.Text;
             OnTarifa(this, tarifa);
-
-
-
         }
-
-        
+                
         public virtual void OnTarifa(MenuElect menuElect, String tarifa)
         {
             recebetarifa?.Invoke(this, tarifa);
@@ -123,12 +132,12 @@ namespace Projecto_LDS
         }
 
 
-        private void OnrecebeVazio(MenuElect menuElect, int contagemVazio)
+        private void OnrecebeVazio(MenuElect menuElect, string contagemVazio)
         {
             recebeVazio?.Invoke(this, contagemVazio);
         }
 
-        private void OnrecebeFora(MenuElect menuElect, int contagemFora)
+        private void OnrecebeFora(MenuElect menuElect, string contagemFora)
         {
             recebeFora?.Invoke(this, contagemFora);
         }
