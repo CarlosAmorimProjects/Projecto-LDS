@@ -15,7 +15,7 @@ namespace Projecto_LDS
 
 {
    
-    // criar o delegate
+        // criar o delegate
         public delegate void CalculoConsumosEventHandler(object source, EventArgs args);
         public delegate void RecebeVazioEventHandler(object source, int ContagemVazio);
         public delegate void RecebeForaEventHandler(object source, int ContagemFora);

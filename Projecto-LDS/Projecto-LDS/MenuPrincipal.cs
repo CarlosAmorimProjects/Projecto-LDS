@@ -79,8 +79,8 @@ namespace Projecto_LDS
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Configuracoes configur = new Configuracoes();
-            configur.ShowDialog();
+            Configuracoes config = new Configuracoes();
+            config.ShowDialog();
             ShowDialog();
         }
         
