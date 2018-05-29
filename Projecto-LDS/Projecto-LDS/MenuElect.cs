@@ -63,20 +63,7 @@ namespace Projecto_LDS
             string ContagemFora = LeituraForaVazio.Text;
             //delegate
             OnrecebeFora(this,ContagemFora);
-
-            /*int ContagemForaInt;
-            string ContagemFora = LeituraForaVazio.Text;
-            int ContagemFora = int.Parse(LeituraForaVazio.Text);
-            if (Int32.TryParse(ContagemFora, out ContagemForaInt))
-                {
-                OnrecebeFora(this, ContagemForaInt);
-                }
-            else
-            {
-                throw new MenuPrincipal.
-            }*/
-
-
+            
         }
 
 

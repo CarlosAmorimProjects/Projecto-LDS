@@ -22,11 +22,13 @@ namespace Projecto_LDS
             InitializeComponent();
             MenuElect menuElect = new MenuElect();
             Configuracoes config = new Configuracoes();
+            MenuGas menuGas = new MenuGas();
 
             menuElect.ConsumosRecebidos += new CalculoConsumosEventHandler(OnConsumosRecebidos);
             menuElect.recebeVazio += new RecebeVazioEventHandler(OnrecebeVazio);
             menuElect.recebeFora += new RecebeForaEventHandler(OnrecebeFora);
             menuElect.recebetarifa += new TarifaEventHandler(Onrecebetarifa);
+            menuGas.RecebeGN += new RecebeGNEventHandler(OnrecebeGn);
             config.guardaTarifaSimples += new GuardarTSEventHandler(OnTarifaSimples);
             config.guardaTarifaBiVazio += new GuardarBiVazioEventHandler(OnTarifaBiVazio);
             config.guardaTarifaBiFora += new GuardarBiForaEventHandler(OnTarifaBiFora);
@@ -40,15 +42,56 @@ namespace Projecto_LDS
                 }
 
 
+
+            }
+
+            void OnrecebeGn (object source, string LeituraGN)
+            {
+                try
+                {
+                    Int32.Parse(LeituraGN);
+
+                }
+                catch (ArgumentNullException)
+                {
+                    ExceptionMessage.Message("Não foram introduzidos dados");
+                    return;
+                }
+
+                catch (FormatException)
+                {
+                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    return;
+                }
+
+                catch (OverflowException)
+                {
+                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    return;
+                }
+
             }
 
             void OnrecebeFora(object source, string contagemFora)
             {
                 try
                 {
-                    Int32.TryParse(contagemFora, out int contagemForaInt);
+                    Int32.Parse(contagemFora);
+
                 }
-                catch (Exception)
+                catch (ArgumentNullException)
+                {
+                    ExceptionMessage.Message("Não foram introduzidos dados");
+                    return;
+                }
+
+                catch (FormatException)
+                {
+                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    return;
+                }
+
+                catch (OverflowException)
                 {
                     ExceptionMessage.Message("Apenas números inteiros permitidos");
                     return;
@@ -60,18 +103,28 @@ namespace Projecto_LDS
             {
                 try
                 {
-                        Int32.TryParse(contagemVazio, out int contagemVazioInt);
+                    Int32.Parse(contagemVazio);
+
                 }
-                catch (Exception)
+                catch (ArgumentNullException)
+                {
+                    ExceptionMessage.Message("Não foram introduzidos dados");
+                    return;
+                }
+
+                catch (FormatException)
                 {
                     ExceptionMessage.Message("Apenas números inteiros permitidos");
                     return;
                 }
 
-
-
+                catch (OverflowException)
+                {
+                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    return;
+                }
             }
-
+            
             void OnConsumosRecebidos(object source, EventArgs e)
             {
                 
@@ -81,24 +134,50 @@ namespace Projecto_LDS
             {
                 try
                 {
-                    Int32.TryParse(tarifasimples, out int tarifasimplesInt);
+                    Int32.Parse(tarifasimples);
+                    
                 }
-                catch (Exception)
+                catch (ArgumentNullException)
+                {
+                    ExceptionMessage.Message("Não foram introduzidos dados");
+                  return;
+                }
+
+                catch (FormatException)
                 {
                     ExceptionMessage.Message("Apenas números inteiros permitidos");
                     return;
                 }
 
+                catch (OverflowException)
+                {
+                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    return;
+                }
 
+                
             }
 
             void OnTarifaBiVazio (object source, string tarifaBiVazio)
             {
                 try
                 {
-                    Int32.TryParse(tarifaBiVazio, out int tarifaBiVazioInt);
+                    Int32.Parse(tarifaBiVazio);
+
                 }
-                catch (Exception)
+                catch (ArgumentNullException)
+                {
+                    ExceptionMessage.Message("Não foram introduzidos dados");
+                    return;
+                }
+
+                catch (FormatException)
+                {
+                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    return;
+                }
+
+                catch (OverflowException)
                 {
                     ExceptionMessage.Message("Apenas números inteiros permitidos");
                     return;
@@ -110,9 +189,22 @@ namespace Projecto_LDS
             {
                 try
                 {
-                    Int32.TryParse(tarifaBiFora, out int tarifaBiForaInt);
+                    Int32.Parse(tarifaBiFora);
+
                 }
-                catch (Exception)
+                catch (ArgumentNullException)
+                {
+                    ExceptionMessage.Message("Não foram introduzidos dados");
+                    return;
+                }
+
+                catch (FormatException)
+                {
+                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    return;
+                }
+
+                catch (OverflowException)
                 {
                     ExceptionMessage.Message("Apenas números inteiros permitidos");
                     return;
@@ -122,11 +214,24 @@ namespace Projecto_LDS
 
             void OnTarifaGN (object source, string tarifaGn)
             {
-                 try
+                try
                 {
-                    Int32.TryParse(tarifaGn, out int tarifaGnInt);
+                    Int32.Parse(tarifaGn);
+
                 }
-                catch (Exception)
+                catch (ArgumentNullException)
+                {
+                    ExceptionMessage.Message("Não foram introduzidos dados");
+                    return;
+                }
+
+                catch (FormatException)
+                {
+                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    return;
+                }
+
+                catch (OverflowException)
                 {
                     ExceptionMessage.Message("Apenas números inteiros permitidos");
                     return;
