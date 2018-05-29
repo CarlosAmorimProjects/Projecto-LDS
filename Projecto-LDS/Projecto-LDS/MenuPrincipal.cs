@@ -54,20 +54,17 @@ namespace Projecto_LDS
                 }
                 catch (ArgumentNullException)
                 {
-                    ExceptionMessage.Message("Não foram introduzidos dados");
-                    return;
+                    ErroConversao.ErroConversaoVazio();
                 }
 
                 catch (FormatException)
                 {
-                    ExceptionMessage.Message("Apenas números inteiros permitidos");
-                    return;
+                    ErroConversao.ErroConversaoRecebe();
                 }
 
                 catch (OverflowException)
                 {
-                    ExceptionMessage.Message("Apenas números inteiros permitidos");
-                    return;
+                    ErroConversao.ErroConversaoRecebe();
                 }
 
             }
@@ -81,19 +78,19 @@ namespace Projecto_LDS
                 }
                 catch (ArgumentNullException)
                 {
-                    ExceptionMessage.Message("Não foram introduzidos dados");
+                    ErroConversao.ErroConversaoVazio();
                     return;
                 }
 
                 catch (FormatException)
                 {
-                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    ErroConversao.ErroConversaoRecebe();
                     return;
                 }
 
                 catch (OverflowException)
                 {
-                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    ErroConversao.ErroConversaoRecebe();
                     return;
                 }
 
@@ -108,19 +105,19 @@ namespace Projecto_LDS
                 }
                 catch (ArgumentNullException)
                 {
-                    ExceptionMessage.Message("Não foram introduzidos dados");
+                    ErroConversao.ErroConversaoVazio();
                     return;
                 }
 
                 catch (FormatException)
                 {
-                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    ErroConversao.ErroConversaoRecebe();
                     return;
                 }
 
                 catch (OverflowException)
                 {
-                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    ErroConversao.ErroConversaoRecebe();
                     return;
                 }
             }
@@ -139,19 +136,19 @@ namespace Projecto_LDS
                 }
                 catch (ArgumentNullException)
                 {
-                    ExceptionMessage.Message("Não foram introduzidos dados");
-                  return;
+                    ErroConversao.ErroConversaoVazio();
+                    return;
                 }
 
                 catch (FormatException)
                 {
-                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    ErroConversao.ErroConversaoRecebe();
                     return;
                 }
 
                 catch (OverflowException)
                 {
-                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    ErroConversao.ErroConversaoRecebe();
                     return;
                 }
 
@@ -167,19 +164,19 @@ namespace Projecto_LDS
                 }
                 catch (ArgumentNullException)
                 {
-                    ExceptionMessage.Message("Não foram introduzidos dados");
+                    ErroConversao.ErroConversaoVazio();
                     return;
                 }
 
                 catch (FormatException)
                 {
-                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    ErroConversao.ErroConversaoRecebe();
                     return;
                 }
 
                 catch (OverflowException)
                 {
-                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    ErroConversao.ErroConversaoRecebe();
                     return;
                 }
 
@@ -194,19 +191,19 @@ namespace Projecto_LDS
                 }
                 catch (ArgumentNullException)
                 {
-                    ExceptionMessage.Message("Não foram introduzidos dados");
+                    ErroConversao.ErroConversaoVazio();
                     return;
                 }
 
                 catch (FormatException)
                 {
-                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    ErroConversao.ErroConversaoRecebe();
                     return;
                 }
 
                 catch (OverflowException)
                 {
-                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    ErroConversao.ErroConversaoRecebe();
                     return;
                 }
 
@@ -221,19 +218,19 @@ namespace Projecto_LDS
                 }
                 catch (ArgumentNullException)
                 {
-                    ExceptionMessage.Message("Não foram introduzidos dados");
+                    ErroConversao.ErroConversaoVazio();
                     return;
                 }
 
                 catch (FormatException)
                 {
-                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    ErroConversao.ErroConversaoRecebe();
                     return;
                 }
 
                 catch (OverflowException)
                 {
-                    ExceptionMessage.Message("Apenas números inteiros permitidos");
+                    ErroConversao.ErroConversaoRecebe();
                     return;
                 }
 
