@@ -22,6 +22,15 @@ namespace Projecto_LDS.Model
 
         }
 
+        public void CalculoGN (int LeituraGN, double tarifaGN)
+        {
+            double resultado = 0;
+            resultado = LeituraGN * tarifaGN;
+
+            RecebeResultadoGN( float resultado);
+
+        }
+
         
     }
 }

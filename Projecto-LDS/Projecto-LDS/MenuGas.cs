@@ -31,6 +31,18 @@ namespace Projecto_LDS.Views
         public virtual void OnrecebeGn(MenuGas menuGas, string LeituraGN)
         {
             RecebeGN?.Invoke(this, LeituraGN);
+
+        }
+
+        private void RecebeResultadoGN (float resultado)
+        {
+            textBox2_TextChanged(this, resultado);
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

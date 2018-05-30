@@ -13,232 +13,15 @@ using System.Windows.Forms;
 
 namespace Projecto_LDS
 {
-   
+
     public partial class MenuPrincipal : Form
     {
-
         public MenuPrincipal()
         {
             InitializeComponent();
-            MenuElect menuElect = new MenuElect();
-            Configuracoes config = new Configuracoes();
-            MenuGas menuGas = new MenuGas();
-
-            menuElect.ConsumosRecebidos += new CalculoConsumosEventHandler(OnConsumosRecebidos);
-            menuElect.recebeVazio += new RecebeVazioEventHandler(OnrecebeVazio);
-            menuElect.recebeFora += new RecebeForaEventHandler(OnrecebeFora);
-            menuElect.recebetarifa += new TarifaEventHandler(Onrecebetarifa);
-            menuGas.RecebeGN += new RecebeGNEventHandler(OnrecebeGn);
-            config.guardaTarifaSimples += new GuardarTSEventHandler(OnTarifaSimples);
-            config.guardaTarifaBiVazio += new GuardarBiVazioEventHandler(OnTarifaBiVazio);
-            config.guardaTarifaBiFora += new GuardarBiForaEventHandler(OnTarifaBiFora);
-            config.guardaGN += new GuardaGNEventHandler(OnTarifaGN);
-
-            void Onrecebetarifa(object source, string tarifa)
-            {
-                if (tarifa == "Tarifa Simples")
-                {
-
-                }
-
-
-
-            }
-
-            void OnrecebeGn (object source, string LeituraGN)
-            {
-                try
-                {
-                    Int32.Parse(LeituraGN);
-
-                }
-                catch (ArgumentNullException)
-                {
-                    ErroConversao.ErroConversaoVazio();
-                }
-
-                catch (FormatException)
-                {
-                    ErroConversao.ErroConversaoRecebe();
-                }
-
-                catch (OverflowException)
-                {
-                    ErroConversao.ErroConversaoRecebe();
-                }
-
-            }
-
-            void OnrecebeFora(object source, string contagemFora)
-            {
-                try
-                {
-                    Int32.Parse(contagemFora);
-
-                }
-                catch (ArgumentNullException)
-                {
-                    ErroConversao.ErroConversaoVazio();
-                    return;
-                }
-
-                catch (FormatException)
-                {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
-                }
-
-                catch (OverflowException)
-                {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
-                }
-
-            }
-
-            void OnrecebeVazio(object source, string contagemVazio)
-            {
-                try
-                {
-                    Int32.Parse(contagemVazio);
-
-                }
-                catch (ArgumentNullException)
-                {
-                    ErroConversao.ErroConversaoVazio();
-                    return;
-                }
-
-                catch (FormatException)
-                {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
-                }
-
-                catch (OverflowException)
-                {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
-                }
-            }
-            
-            void OnConsumosRecebidos(object source, EventArgs e)
-            {
-                
-            }
-
-            void OnTarifaSimples (object source, string tarifasimples)
-            {
-                try
-                {
-                    Int32.Parse(tarifasimples);
-                    
-                }
-                catch (ArgumentNullException)
-                {
-                    ErroConversao.ErroConversaoVazio();
-                    return;
-                }
-
-                catch (FormatException)
-                {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
-                }
-
-                catch (OverflowException)
-                {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
-                }
-
-                
-            }
-
-            void OnTarifaBiVazio (object source, string tarifaBiVazio)
-            {
-                try
-                {
-                    Int32.Parse(tarifaBiVazio);
-
-                }
-                catch (ArgumentNullException)
-                {
-                    ErroConversao.ErroConversaoVazio();
-                    return;
-                }
-
-                catch (FormatException)
-                {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
-                }
-
-                catch (OverflowException)
-                {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
-                }
-
-            }
-
-            void OnTarifaBiFora (object source, string tarifaBiFora)
-            {
-                try
-                {
-                    Int32.Parse(tarifaBiFora);
-
-                }
-                catch (ArgumentNullException)
-                {
-                    ErroConversao.ErroConversaoVazio();
-                    return;
-                }
-
-                catch (FormatException)
-                {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
-                }
-
-                catch (OverflowException)
-                {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
-                }
-
-            }
-
-            void OnTarifaGN (object source, string tarifaGn)
-            {
-                try
-                {
-                    Int32.Parse(tarifaGn);
-
-                }
-                catch (ArgumentNullException)
-                {
-                    ErroConversao.ErroConversaoVazio();
-                    return;
-                }
-
-                catch (FormatException)
-                {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
-                }
-
-                catch (OverflowException)
-                {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
-                }
-
-            }
-
         }
 
-            
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -265,7 +48,7 @@ namespace Projecto_LDS
             MenuGas menuGas = new MenuGas();
             menuGas.ShowDialog();
             ShowDialog();
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -275,7 +58,7 @@ namespace Projecto_LDS
             config.ShowDialog();
             ShowDialog();
         }
-        
-    }
 
+    }
 }
+
