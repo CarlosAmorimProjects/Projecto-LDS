@@ -27,7 +27,7 @@ namespace Projecto_LDS.Model
             double resultado = 0;
             resultado = LeituraGN * tarifaGN;
 
-            RecebeResultadoGN( float resultado);
+            //RecebeResultadoGN( float resultado);
 
         }
 

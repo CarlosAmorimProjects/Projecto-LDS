@@ -36,7 +36,7 @@ namespace Projecto_LDS.Views
 
         private void RecebeResultadoGN (float resultado)
         {
-            textBox2_TextChanged(this, resultado);
+            //textBox2_TextChanged(this, resultado);
 
         }
 

@@ -53,7 +53,7 @@ namespace Projecto_LDS.Model
                 try
                 {
                     Int32.Parse(LeituraGN);
-                    Model.Model.CalculoGN(LeituraGN, tarifaGN);
+                   // Model.Model.CalculoGN(LeituraGN, tarifaGN);
 
                 }
                 catch (ArgumentNullException)
