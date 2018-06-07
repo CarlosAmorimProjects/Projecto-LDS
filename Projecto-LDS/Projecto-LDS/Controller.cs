@@ -58,17 +58,17 @@ namespace Projecto_LDS.Model
                 }
                 catch (ArgumentNullException)
                 {
-                    ErroConversao.ErroConversaoVazio();
+                    throw new ErroConversaoRecebe("Campo Vazio");
                 }
 
                 catch (FormatException)
                 {
-                    ErroConversao.ErroConversaoRecebe();
+                    throw new ErroConversaoRecebe("Valores inválidos");
                 }
 
                 catch (OverflowException)
                 {
-                    ErroConversao.ErroConversaoRecebe();
+                    throw new ErroConversaoRecebe("Tamanho errado");
                 }
 
             }
@@ -84,20 +84,17 @@ namespace Projecto_LDS.Model
                 }
                 catch (ArgumentNullException)
                 {
-                    ErroConversao.ErroConversaoVazio();
-                    return;
+                    throw new ErroConversaoRecebe("Campo Vazio");
                 }
 
                 catch (FormatException)
                 {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
+                    throw new ErroConversaoRecebe("Valores inválidos");
                 }
 
                 catch (OverflowException)
                 {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
+                    throw new ErroConversaoRecebe("Tamanho errado");
                 }
 
             }
@@ -111,20 +108,17 @@ namespace Projecto_LDS.Model
                 }
                 catch (ArgumentNullException)
                 {
-                    ErroConversao.ErroConversaoVazio();
-                    return;
+                    throw new ErroConversaoRecebe("Campo Vazio");
                 }
 
                 catch (FormatException)
                 {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
+                    throw new ErroConversaoRecebe("Valores inválidos");
                 }
 
                 catch (OverflowException)
                 {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
+                    throw new ErroConversaoRecebe("Tamanho errado");
                 }
             }
 
@@ -142,20 +136,17 @@ namespace Projecto_LDS.Model
                 }
                 catch (ArgumentNullException)
                 {
-                    ErroConversao.ErroConversaoVazio();
-                    return;
+                    throw new ErroConversaoRecebe("Campo Vazio");
                 }
 
                 catch (FormatException)
                 {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
+                    throw new ErroConversaoRecebe("Valores inválidos");
                 }
 
                 catch (OverflowException)
                 {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
+                    throw new ErroConversaoRecebe("Tamanho errado");
                 }
 
 
@@ -170,20 +161,17 @@ namespace Projecto_LDS.Model
                 }
                 catch (ArgumentNullException)
                 {
-                    ErroConversao.ErroConversaoVazio();
-                    return;
+                    throw new ErroConversaoRecebe("Campo Vazio");
                 }
 
                 catch (FormatException)
                 {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
+                    throw new ErroConversaoRecebe("Valores inválidos");
                 }
 
                 catch (OverflowException)
                 {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
+                    throw new ErroConversaoRecebe("Tamanho errado");
                 }
 
             }
@@ -197,20 +185,17 @@ namespace Projecto_LDS.Model
                 }
                 catch (ArgumentNullException)
                 {
-                    ErroConversao.ErroConversaoVazio();
-                    return;
+                    throw new ErroConversaoRecebe("Campo Vazio");
                 }
 
                 catch (FormatException)
                 {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
+                    throw new ErroConversaoRecebe("Valores inválidos");
                 }
 
                 catch (OverflowException)
                 {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
+                    throw new ErroConversaoRecebe("Tamanho errado");
                 }
 
             }
@@ -224,20 +209,17 @@ namespace Projecto_LDS.Model
                 }
                 catch (ArgumentNullException)
                 {
-                    ErroConversao.ErroConversaoVazio();
-                    return;
+                    throw new ErroConversaoRecebe("Campo Vazio");
                 }
 
                 catch (FormatException)
                 {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
+                    throw new ErroConversaoRecebe("Valores inválidos");
                 }
 
                 catch (OverflowException)
                 {
-                    ErroConversao.ErroConversaoRecebe();
-                    return;
+                    throw new ErroConversaoRecebe("Tamanho errado");
                 }
 
             }

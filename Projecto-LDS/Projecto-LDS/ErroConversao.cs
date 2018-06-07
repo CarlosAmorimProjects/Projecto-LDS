@@ -6,20 +6,18 @@ using System.Threading.Tasks;
 
 namespace Projecto_LDS
 {
-    class ErroConversao
-    {
-        public static void ErroConversaoRecebe ()
-        {
-            ExceptionMessage.Message("Apenas números inteiros");
-            return;
+     public class ErroConversaoRecebe: Exception
+     {
+        
 
+        public ErroConversaoRecebe (string message)
+        : base(message)
+        {
         }
 
-        public static void ErroConversaoVazio()
+        public ErroConversaoRecebe (string message, Exception inner)
+            : base(message, inner)
         {
-            ExceptionMessage.Message("Não foram introduzidos dados");
-            return;
-
         }
-    }
+     }
 }
