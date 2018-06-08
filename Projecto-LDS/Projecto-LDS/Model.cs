@@ -22,12 +22,35 @@ namespace Projecto_LDS.Model
 
         }
 
-        public void CalculoGN (int LeituraGN, double tarifaGN)
+        public static void CalculoGN (int LeituraGN, string  tarifaGN)
         {
             double resultado = 0;
-            resultado = LeituraGN * tarifaGN;
+            double tarifaGNCalculo;
 
-            //RecebeResultadoGN( float resultado);
+            try
+            {
+                tarifaGNCalculo = Double.Parse(tarifaGN);
+            }
+
+            catch (ErroConversaoRecebe)
+            {
+                throw new ErroConversaoRecebe("Campo Vazio");
+            }
+
+            catch (FormatException)
+            {
+                throw new ErroConversaoRecebe("Valores inválidos");
+            }
+
+            catch (OverflowException)
+            {
+                throw new ErroConversaoRecebe("Tamanho errado");
+            }
+
+            
+            resultado = tarifaGNCalculo * LeituraGN;
+
+
 
         }
 

@@ -1,5 +1,6 @@
 ﻿using Projecto_LDS.Views;
 using Projecto_LDS.Model;
+using Projecto_LDS.Properties;
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -200,26 +201,16 @@ namespace Projecto_LDS.Model
 
             }
 
-            void OnTarifaGN(object source, string tarifaGn)
+            void OnTarifaGN(int LeituraGN, string tarifaGn)
             {
                 try
                 {
-                    Double.Parse(tarifaGn);
+                    Model.CalculoGN(LeituraGN, tarifaGn);
 
                 }
-                catch (ArgumentNullException)
+                catch (ErroConversaoRecebe)
                 {
-                    throw new ErroConversaoRecebe("Campo Vazio");
-                }
-
-                catch (FormatException)
-                {
-                    throw new ErroConversaoRecebe("Valores inválidos");
-                }
-
-                catch (OverflowException)
-                {
-                    throw new ErroConversaoRecebe("Tamanho errado");
+                    ExceptionMessage.Message(message);
                 }
 
             }
