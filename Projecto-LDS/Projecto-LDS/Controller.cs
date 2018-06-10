@@ -86,7 +86,6 @@
                 ExceptionMessage.Message(message);
             }
         
-                int leituraGN = Int32.Parse(LeituraGN);
                 menuPrincipal.SetCalculaLabel("Valor Calculado:" + leituraGN);
                 menuPrincipal.HideChilds();
                 menuPrincipal.Show();
