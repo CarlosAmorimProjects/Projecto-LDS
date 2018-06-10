@@ -1,29 +1,19 @@
-﻿using Projecto_LDS.Model;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-
-
-namespace Projecto_LDS
-
+﻿namespace Projecto_LDS
 {
-   
-        // criar o delegate
-        public delegate void CalculoConsumosEventHandler(object source, EventArgs args);
-        public delegate void RecebeVazioEventHandler(object source, string ContagemVazio);
-        public delegate void RecebeForaEventHandler(object source, string ContagemFora);
-        public delegate void TarifaEventHandler(object source, string tarifa);
+    using System;
+    using System.Windows.Forms;
+
+
+    // criar o delegate
+    public delegate void FormCloseEventHandler(object source, EventArgs args);
+    public delegate void CalculoConsumosEventHandler(object source, EventArgs args);
+    public delegate void RecebeVazioEventHandler(object source, string ContagemVazio);
+    public delegate void RecebeForaEventHandler(object source, string ContagemFora);
+    public delegate void TarifaEventHandler(object source, string tarifa);
 
     public partial class MenuElect : Form
-
     {
+        public event FormCloseEventHandler FormClose;
         public event CalculoConsumosEventHandler ConsumosRecebidos;
         public event RecebeVazioEventHandler recebeVazio;
         public event RecebeForaEventHandler recebeFora;
@@ -51,27 +41,27 @@ namespace Projecto_LDS
             string ContagemVazio = LeituraVazio.Text;
 
             //delegate
-            OnrecebeVazio(this,ContagemVazio);
-            
+            OnrecebeVazio(this, ContagemVazio);
+
 
         }
 
-        
+
         public void textBox5_TextChanged(object sender, EventArgs e)
         {
 
             string ContagemFora = LeituraForaVazio.Text;
             //delegate
-            OnrecebeFora(this,ContagemFora);
-            
+            OnrecebeFora(this, ContagemFora);
+
         }
 
 
-          
-    
-        
+
+
+
         private void button1_Click(object sender, EventArgs e)
-        {  
+        {
             // método delegate
             OnConsumosRecebidos();
         }
@@ -88,7 +78,7 @@ namespace Projecto_LDS
 
         private void textBox4_TextChanged_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label2_Click_1(object sender, EventArgs e)
@@ -97,7 +87,7 @@ namespace Projecto_LDS
 
         }
 
-        public double RecebeResultado (double resultado)
+        public double RecebeResultado(double resultado)
         {
             return resultado;
         }
@@ -107,7 +97,7 @@ namespace Projecto_LDS
             String tarifa = comboBox1.Text;
             OnTarifa(this, tarifa);
         }
-                
+
         public virtual void OnTarifa(MenuElect menuElect, String tarifa)
         {
             recebetarifa?.Invoke(this, tarifa);
@@ -118,6 +108,10 @@ namespace Projecto_LDS
             ConsumosRecebidos?.Invoke(this, EventArgs.Empty);
         }
 
+        public virtual void OnFormClose()
+        {
+            FormClose?.Invoke(this, EventArgs.Empty);
+        }
 
         private void OnrecebeVazio(MenuElect menuElect, string contagemVazio)
         {

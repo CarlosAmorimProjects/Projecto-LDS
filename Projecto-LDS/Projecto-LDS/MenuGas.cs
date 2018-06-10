@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Projecto_LDS.Views
+﻿namespace Projecto_LDS.Views
 {
-    public delegate void RecebeGNEventHandler(object source, string tarifaGn);
+    using System;
+    using System.Windows.Forms;
 
+    public delegate void RecebeGNEventHandler(object source, string tarifaGn);
+    public delegate void FormCloseEventHandler(object source, EventArgs args);
 
     public partial class MenuGas : Form
     {
         public event RecebeGNEventHandler RecebeGN;
+        public event FormCloseEventHandler FormClose;
 
         public MenuGas()
         {
@@ -24,8 +18,7 @@ namespace Projecto_LDS.Views
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string LeituraGN = textBox1.Text;
-            OnrecebeGn(this, LeituraGN);
+
         }
 
         public virtual void OnrecebeGn(MenuGas menuGas, string LeituraGN)
@@ -34,9 +27,8 @@ namespace Projecto_LDS.Views
 
         }
 
-        private void RecebeResultadoGN (float resultado)
+        private void RecebeResultadoGN(float resultado)
         {
-            //textBox2_TextChanged(this, resultado);
 
         }
 
@@ -44,5 +36,17 @@ namespace Projecto_LDS.Views
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string LeituraGN = textBox1.Text;
+            OnrecebeGn(this, LeituraGN);
+        }
+
+        public virtual void OnFormClose()
+        {
+            FormClose?.Invoke(this, EventArgs.Empty);
+        }
     }
 }
+

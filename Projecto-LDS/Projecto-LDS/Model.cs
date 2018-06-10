@@ -22,14 +22,46 @@ namespace Projecto_LDS.Model
 
         }
 
-        public static void CalculoGN (int LeituraGN, string  tarifaGN)
+        public static void CalculoGN (string LeituraGN)
         {
-            double resultado = 0;
+            //double resultado = 0;
             double tarifaGNCalculo;
 
             try
             {
-                tarifaGNCalculo = Double.Parse(tarifaGN);
+                tarifaGNCalculo = Double.Parse(LeituraGN);
+            }
+
+            catch (ErroConversaoRecebe)
+            {
+                throw new ErroConversaoRecebe("Campo Vazio");
+            }
+
+            catch (FormatException)
+            {
+                throw new ErroConversaoRecebe("Valores inválidos");
+            }
+
+            catch (OverflowException)
+            {
+                throw new ErroConversaoRecebe("Tamanho errado");
+            }
+            
+            // resultado = LeituraGN*TarifaGN;
+
+        }
+
+        public static void CalculoElecSimples (string ContagemVazio, string ContagemFora)
+        {
+            double ConsumoElecSimplesVazio;
+            double ConsumoElecSimplesFora;
+            double resultado;
+
+            try
+            {
+                ConsumoElecSimplesFora = Double.Parse(ContagemVazio);
+                ConsumoElecSimplesVazio = Double.Parse(ContagemFora);
+
             }
 
             catch (ErroConversaoRecebe)
@@ -47,12 +79,76 @@ namespace Projecto_LDS.Model
                 throw new ErroConversaoRecebe("Tamanho errado");
             }
 
-            
-            resultado = tarifaGNCalculo * LeituraGN;
-
-
+            // resultado = (ContagemVazio+ContagemFora)*tarifaSimples;
 
         }
+
+        public static void CalculoElecBi(string ContagemVazio, string ContagemFora)
+        {
+            double ConsumoElecVazio;
+            double ConsumoElecFora;
+            double resultado;
+
+            try
+            {
+                ConsumoElecVazio = Double.Parse(ContagemVazio);
+                ConsumoElecFora = Double.Parse(ContagemFora);
+
+            }
+
+            catch (ErroConversaoRecebe)
+            {
+                throw new ErroConversaoRecebe("Campo Vazio");
+            }
+
+            catch (FormatException)
+            {
+                throw new ErroConversaoRecebe("Valores inválidos");
+            }
+
+            catch (OverflowException)
+            {
+                throw new ErroConversaoRecebe("Tamanho errado");
+            }
+
+            // resultado = (ContagemVazio*tarifaBiVazio) + (ContagemFora*tarifaBiFora);
+
+        }
+
+        public static void CalculoElecTri(string ContagemVazio, string ContagemFora)
+        {
+            double ConsumoElecVazio;
+            double ConsumoElecFora;
+            double resultado;
+
+            try
+            {
+                ConsumoElecVazio = Double.Parse(ContagemVazio);
+                ConsumoElecFora = Double.Parse(ContagemFora);
+
+            }
+
+            catch (ErroConversaoRecebe)
+            {
+                throw new ErroConversaoRecebe("Campo Vazio");
+            }
+
+            catch (FormatException)
+            {
+                throw new ErroConversaoRecebe("Valores inválidos");
+            }
+
+            catch (OverflowException)
+            {
+                throw new ErroConversaoRecebe("Tamanho errado");
+            }
+
+            // resultado = (ContagemVazio*tarifaBiVazio) + (ContagemFora*tarifaBiFora);
+
+        }
+
+
+    }
 
         
     }

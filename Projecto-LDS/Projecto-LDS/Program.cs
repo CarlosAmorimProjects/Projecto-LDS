@@ -9,15 +9,12 @@ namespace Projecto_LDS
 {
     static class Program
     {
-
-
         static void Main()
         {
-            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuPrincipal());
-            
+            Controller controller = new Controller();
         }
     }
 }
+

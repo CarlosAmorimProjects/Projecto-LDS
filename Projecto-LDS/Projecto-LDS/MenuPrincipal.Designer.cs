@@ -32,6 +32,7 @@
             this.Electricidade = new System.Windows.Forms.Button();
             this.GN = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblValorCalculado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Electricidade
@@ -60,7 +61,6 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(673, 411);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 27);
@@ -69,6 +69,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lblValorCalculado
+            // 
+            this.lblValorCalculado.AutoSize = true;
+            this.lblValorCalculado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.lblValorCalculado.Location = new System.Drawing.Point(343, 265);
+            this.lblValorCalculado.Name = "lblValorCalculado";
+            this.lblValorCalculado.Size = new System.Drawing.Size(153, 24);
+            this.lblValorCalculado.TabIndex = 4;
+            this.lblValorCalculado.Text = "Valor Calculado?";
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -76,12 +86,14 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblValorCalculado);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.GN);
             this.Controls.Add(this.Electricidade);
             this.Name = "MenuPrincipal";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -89,6 +101,9 @@
         private System.Windows.Forms.Button Electricidade;
         private System.Windows.Forms.Button GN;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblValorCalculado;
     }
 }
+
+
 
